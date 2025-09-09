@@ -121,18 +121,24 @@ def get_text(filename):
     return hwp.get_text()
  
 
-# # text 추출 함수 -> 이 함수를 사용하면 됨
-# def get_text(filename):
-#     hwp = HWPExtractor(filename) 
-#     return hwp.get_text()
-# # _____암행어사
-# def remove_chinese_characters(s: str):
-#     return re.sub(r'[\u4e00-\u9fff]+', '', s)
 
-# def remove_control_characters(s):
-#     return "".join(ch for ch in s if unicodedata.category(ch)[0]!="C")
 path='C:\\Users\\Owner\\Documents\\CODE\\Git1\\firgit.hwp'
 print(get_text(path))
-print(len(get_text(path)))
-#notspace=get_text(path).replace(' ','')
-#print(len(notspace))
+lines=get_text(path)
+f=open('C:\\Users\\Owner\\Documents\\CODE\\GIT1\\c.txt','w')
+f.write(lines)
+f.close()
+# f=open('C:\\Users\\Owner\\Documents\\CODE\\GIT1\\c.txt','r')
+# lines = f.readlines()
+# before= '이'
+# after= '@@@@@@'
+# new_text_content=''
+# for i, l in enumerate(lines):
+#     new_string = l.replace(before,after)
+#     if new_string:
+#         new_text_content += new_string + '\n'              
+# with open('C:\\Users\\Owner\\Documents\\CODE\\GIT1\\c.txt','w') as f:
+#     print(f"new_text_content{new_text_content}")
+#     f.write(new_text_content)
+# f=open('C:\\Users\\Owner\\Documents\\CODE\\GIT1\\c.txt','r')
+# print(f.readlines())
